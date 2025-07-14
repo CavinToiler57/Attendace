@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Attendance</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #5e72e4;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #5e72e4;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 12px 18px;
+      width: 48%;
+      background-color: #5e72e4;
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #324cdd;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Attendance_Machine</h2>
+    <form method="POST" action="/submit">
+      <input type="text" name="name" placeholder="Enter your name" required>
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <div class="button-group">
+        <button type="submit" name="action" value="checkin">Check In</button>
+        <button type="submit" name="action" value="checkout">Check Out</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
